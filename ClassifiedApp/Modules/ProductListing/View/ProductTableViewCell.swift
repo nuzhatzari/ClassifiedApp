@@ -43,6 +43,7 @@ class ProductTableViewCell: UITableViewCell, UIScrollViewDelegate {
             let imgView = UIImageView(frame: CGRect(x:scrollViewWidth*CGFloat((index)), y:0, width:scrollViewWidth, height:scrollViewHeight))
             let url = product.image_urls_thumbnails[0]
             imgView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"), options: SDWebImageOptions.continueInBackground, context: nil)
+            imgView.contentMode = ContentMode.scaleAspectFit
             scrollView.addSubview(imgView)
             
 

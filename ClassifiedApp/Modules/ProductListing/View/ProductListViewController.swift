@@ -94,9 +94,10 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ProductTableViewCell
         let product = products[indexPath.row]
         
-        DispatchQueue.main.async {
+        /*DispatchQueue.main.async {
             cell.configureCell(product)
-        }
+        }*/
+        cell.configureCell(product)
         cell.imageViewClickedHandler = {
             self.presenter?.showDetailsOf(product: product, fromNavigationController: self.navigationController!)
         }
