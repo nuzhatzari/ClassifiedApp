@@ -29,6 +29,7 @@
     _prdPrice = price;
     _thumbnails = thumbnails;
     _images = images;
+    [self configureView];
 }
 
 -(void) configureView {
@@ -41,10 +42,10 @@
     for (int index=0; index<_images.count; index++) {
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(scrollViewWidth*index, 0, scrollViewWidth, scrollViewHeight)];
         [imgView sd_setImageWithURL:[NSURL URLWithString:_images[index]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-        
+        [imgView setContentMode:UIViewContentModeScaleAspectFit];
         [_scrollView addSubview:imgView];
     }
-    [_scrollView setContentSize:CGSizeMake(scrollViewWidth*_images.count, scrollViewHeight)];
+    [_scrollView setContentSize:CGSizeMake(scrollViewWidth*_images.count, 0)];
     _scrollView.delegate = self;
     _pageControl.currentPage = 0;
     _pageControl.numberOfPages = _images.count;

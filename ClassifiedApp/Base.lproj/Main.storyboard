@@ -139,6 +139,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="231" id="L53-h7-JM2"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="whe-6P-33g"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="RzC-7P-Tyh"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="AMi-ZD-Kap">
                                 <rect key="frame" x="145.5" y="266" width="123" height="28"/>
