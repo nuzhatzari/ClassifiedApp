@@ -23,7 +23,8 @@ Please follow the below instruction to generate the Coverage Reports
 
 App Features
 1. The homepage shows the list of products.
-![alt text](https://github.com/nuzhatzari/Classifieds/blob/main/Screenshots/article_list.png)
+![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productlist.png)
+
 
 3. Click on any product, the app will navigate to the product details page.
-![alt text](https://github.com/nuzhatzari/Classifieds/blob/main/Screenshots/article_list.png)
+![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productdetails.png)
