@@ -20,11 +20,3 @@ Please follow the below instruction to generate the Coverage Reports
 1. Run all tests (Command-U).
 2. Then open the Report navigator (Command-9).
 3. Select Coverage under the top item in the list.
-
-App Features
-1. The homepage shows the list of products.
-![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productlist.png)
-
-
-2. Click on any product, the app will navigate to the product details page.
-![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productdetails.png)
