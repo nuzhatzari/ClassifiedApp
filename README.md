@@ -26,5 +26,5 @@ App Features
 ![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productlist.png)
 
 
-3. Click on any product, the app will navigate to the product details page.
+2. Click on any product, the app will navigate to the product details page.
 ![alt text](https://github.com/nuzhatzari/ClassifiedApp/blob/main/Scrrenshots/productdetails.png)
