@@ -27,6 +27,9 @@ class ProductListViewController: UIViewController {
         productTableView.estimatedRowHeight = UITableView.automaticDimension
         
         configureView()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(recognizer:)))
+        productTableView.addGestureRecognizer(tap)
     }
     
     func configureView() {
@@ -49,6 +52,13 @@ class ProductListViewController: UIViewController {
         }
     }
 
+    @objc func handleTapGesture(recognizer: UITapGestureRecognizer) {
+        let point = recognizer.location(in: productTableView)
+        if let indexPath = productTableView.indexPathForRow(at: point) {
+            tableView(productTableView, didSelectRowAt: indexPath)
+        }
+        
+    }
     
     //MARK: - Loader
     func showLoading() {
@@ -84,8 +94,12 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ProductTableViewCell
         let product = products[indexPath.row]
         
-        cell.configureCell(product)
-        
+        DispatchQueue.main.async {
+            cell.configureCell(product)
+        }
+        cell.imageViewClickedHandler = {
+            self.presenter?.showDetailsOf(product: product, fromNavigationController: self.navigationController!)
+        }
         return cell
     }
     
