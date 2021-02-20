@@ -1,0 +1,6 @@
+framework module Pods_ClassifiedAppTests {
+  umbrella header "Pods-ClassifiedAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
